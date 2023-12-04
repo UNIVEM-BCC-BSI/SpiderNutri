@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SpiderNutri</title>
+    <link rel="stylesheet" href="styles.css">
+
+
+</head>
+
+
+<body>
+    <header>
+        <img src="logo.png" alt="Logo da Empresa" id="logo">
+    </header>
+
+    <div class="search-box">
+        <input type="text" class="search-txt" id="searchBar" placeholder="Pesquisar...">
+        <a class="search-btn" id="searchLink" onclick="customSearch()">
+            <ion-icon name="search-outline"></ion-icon>
+        </a>
+    </div>
+    </div>
+
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+
+
+    <div id="main-content">
+        <div id="description">
+         
+        </div>
+        
+        <div id="slideshow-container">
+            <div id="slideshow">
+                <img src="1.png" alt="Imagem 1" class="slide activ">
+                <img src="2.png" alt="Imagem 2" class="slide">
+                <img src="3.png" alt="Imagem 3" class="slide">
+                <img src="4.png" alt="Imagem 4" class="slide">
+                <!-- Adicione mais imagens conforme necessário -->
+            </div>
+       
+            <button id="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button id="next" onclick="changeSlide(1)">&#10095;</button>
+            
+              
+        </div>
+       
+    </div>
+    <div id="grafico" style="display: none;">
+        <img src="grafico.png" alt="Gráfico de Valor por Marca">
+    </div> 
+    <script src="script.js"></script>
+</body>
+
+</html>

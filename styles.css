@@ -1,0 +1,217 @@
+html,
+body {
+    font-family: raleway, sans-serif;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #73a6e0;
+    color: #272727;
+    box-sizing: border-box;
+}
+
+.search-box {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 15px;
+    height: 40px;
+    background: #272727;
+    margin-top: 5px;
+    /* Ajuste este valor conforme necessário */
+    margin-left: auto;
+    /* Centraliza horizontalmente */
+    margin-right: auto;
+    margin-left: 5px;
+    /* Centraliza horizontalmente */
+    max-width: 600px;
+    /* ou qualquer outra largura que prefira */
+}
+
+.search-box:hover .search-txt, .search-box .search-txt:focus {
+    width: 240px;
+    padding: 0 6px;
+}
+
+.search-box:hover .search-btn, .search-box .search-txt:focus + .search-btn {
+    background: #888888;
+    color: #272727;
+}
+
+.search-txt {
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0;
+    color: #21D875;
+    transition: 0.5s;
+    font-size: 1rem;
+    width: 0px;
+}
+
+.search-btn {
+    color: #73a6e0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+
+#grafico {
+    margin: 20px 0; /* Adiciona margem acima e abaixo do gráfico */
+    padding: 15px; /* Adiciona um preenchimento ao redor do gráfico */
+    background-color: #73a6e0; /* Cor de fundo para o contêiner do gráfico */
+    
+}   
+
+#grafico img {
+    width: 750px;  
+    max-width: 1500px; /* Limita a largura máxima da imagem do gráfico */
+    height: 500px;     /* Mantém a proporção da altura da imagem */
+    
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+
+
+header {
+    background-color: #272727;
+    color: #4a90e2;
+    text-align: center;
+    padding: 10px 0;
+    
+}
+
+#logo {
+    height: 160px;
+}
+
+#main-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* Alinha os itens ao topo */
+    gap: 20px;
+    /* Espaço entre a descrição e a galeria de imagens */
+    padding: 20px;
+    font-size: 22px
+}
+
+#description {
+    margin-top: 30px;
+    flex-basis: 40%;
+    /* Ajusta a largura da descrição */
+}
+
+#slideshow-container {
+    flex-basis: 35%;
+    /* Ajusta a largura da galeria de imagens */
+    position:relative;
+}
+
+#slideshow {
+    position:relative;
+    height: 300px;
+    /* Altura máxima do slideshow */
+    margin: 0 auto;
+    /* Centraliza o slideshow */
+}
+
+.slide {
+    width: 100%;
+    /* A imagem ocupa toda a largura do contêiner */
+    max-height: 300px;
+    /* Altura máxima da imagem */
+    object-fit: contain;
+    /* Mantém as proporções sem cortar a imagem */
+    display: none;
+    position: absolute;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide-anim {
+    animation: fadeEffect 1s;
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0);
+    /* Cor mais escura com transparência */
+    color: #272727;
+    border: none;
+    /* Borda branca para destacar */
+    cursor: pointer;
+    padding: 0;
+    /* Espaçamento interno */
+    font-size: 1.5em;
+    /* Tamanho do texto das setas */
+    border-radius: 50%;
+    /* Bordas arredondadas */
+    transition: background-color 0.3s, transform 0.3s;
+    /* Suaviza a transição de cores e transformação */
+    z-index: 2;
+}
+
+button:hover {
+    background-color: #272727;
+    /* Muda a cor de fundo ao passar o mouse ou focar */
+    color: #73a6e0;
+    /* Muda a cor das setas ao passar o mouse ou focar */
+}
+
+button:active {
+    transform: translateY(-50%) scale(0.9);
+    /* Efeito de "pressionado" */
+}
+
+#prev,
+#next {
+    width: 40px;
+    /* Largura fixa */
+    height: 40px;
+    /* Altura fixa */
+    line-height: 40px;
+    /* Altura da linha para centralizar o texto verticalmente */
+    text-align: center;
+    /* Centraliza o texto horizontalmente */
+}
+
+#prev {
+    left: -20px;
+    /* Ajuste conforme necessário */
+}
+
+#next {
+    right: -20px;
+    /* Ajuste conforme necessário */
+}
+
+.active {
+    display: block;
+    opacity: 1;
+}
+
+
+/* Estilos adicionais podem ser necessários para responsividade ou para ajustar ao seu design exato */
